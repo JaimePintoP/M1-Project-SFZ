@@ -19,8 +19,7 @@ class Signup {
     validator.validateValidEmail(email);
     validator.validateUniqueEmail(email);
 
-    // TODO- show error messages
-    console.log("validators.erros", validator.errors);
+    this.setErrorMessages();
   };
 
   //password input Handler
@@ -34,8 +33,7 @@ class Signup {
     validator.validatePassword(password);
     validator.validateRepeatPassword(password, repeatPassword);
 
-    // TODO- show error messages
-    console.log("validators.erros", validator.errors);
+    this.setErrorMessages();
   };
 
   //repeat-password input Handler
@@ -49,7 +47,25 @@ class Signup {
     validator.validatePassword(password);
     validator.validateRepeatPassword(password, repeatPassword);
 
-    console.log("validators.erros", validator.errors);
+    this.setErrorMessages();
+  };
+
+  //used to show messages below Sign up form
+  setErrorMessages = () => {
+    //Clear previous messages so they dont add
+    this.errorsWrapper.innerHTML = "";
+
+    const errorsObj = validator.getErrors();
+
+    //returns an array of objects value (only error strings)
+    const errorStringArr = Object.values(errorsObj);
+
+    errorStringArr.forEach((str) => {
+      const p = document.createElement("p");
+      p.textContent = str;
+
+      this.errorsWrapper.appendChild(p);
+    });
   };
 
   // save data (button submit) Handler
