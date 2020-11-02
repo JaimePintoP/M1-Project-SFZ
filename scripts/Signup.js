@@ -90,6 +90,7 @@ class Signup {
     this.passwordInput.value = "";
     this.repeatPasswordInput.value = "";
 
+    //Redirect to home page
     this.redirect();
   };
 

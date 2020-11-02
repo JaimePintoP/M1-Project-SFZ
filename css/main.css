@@ -140,8 +140,11 @@ body {
   color: white;
 }
 
-/* /// PHONE SCREEN /// */
-/* @media (max-width: 768px) { */
+/* **** /// **** DESKTOP SCREEN **** /// **** */
+/* @media (min-width: 768px) */
+
+/* **** /// **** MOBILE SCREEN **** /// **** */
+
 /* *** Texts under an image (info, apod, about us) *** */
 .image-text {
   margin: 15px;
@@ -366,4 +369,3 @@ h2 {
 }
 
 /* *** /// About Us /// *** */
-/* } */
