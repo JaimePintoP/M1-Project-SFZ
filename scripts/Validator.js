@@ -30,7 +30,7 @@ class Validator {
   validateValidEmail = (email) => {
     //if email is valid
 
-    if (emailSyntaxIsValid(email)) {
+    if (this.emailSyntaxIsValid(email)) {
       // delete email error
       delete this.errors.invalidEmailError;
     } else {
@@ -54,7 +54,7 @@ class Validator {
     let emailUnique = true;
 
     users.forEach((usersObj) => {
-      if (usersObj.email === email) {
+      if (usersObj.email === newEmail) {
         emailUnique = false;
       }
     });
@@ -69,13 +69,31 @@ class Validator {
   };
 
   //validate password length
-  validatePassword = (password) => {};
+  validatePassword = (password) => {
+    if (password.length >= 6) {
+      //remove error message
+      delete this.errors.passwordError;
+    } else {
+      // if password is les than 6 char, show error
+      this.errors.passwordError = this.passwordError;
+    }
+  };
 
   //validate if pass and rep-pass match
-  validateRepeatPassword = (password, repeatPassword) => {};
+  validateRepeatPassword = (password, repeatPassword) => {
+    //remove error message
+    if (password === repeatPassword) {
+      delete this.errors.repeatPasswordError;
+    } else {
+      //if passwords dont match, set erros
+      this.errors.repeatPasswordError = this.repeatPasswordError;
+    }
+  };
 
   //get erros to show them to user on sign up page
-  getErrors = () => {};
+  getErrors = () => {
+    return this.errors;
+  };
 }
 
 const validator = new Validator();

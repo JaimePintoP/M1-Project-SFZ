@@ -15,18 +15,41 @@ class Signup {
   handleEmailInput = (event) => {
     const emailInput = event.target;
     const email = emailInput.value;
+
+    validator.validateValidEmail(email);
+    validator.validateUniqueEmail(email);
+
+    // TODO- show error messages
+    console.log("validators.erros", validator.errors);
   };
 
   //password input Handler
   handlePasswordInput = (event) => {
     const passwordInput = event.target;
+    const repeatPasswordInput = this.repeatPasswordInput;
+
     const password = passwordInput.value;
+    const repeatPassword = repeatPasswordInput.value;
+
+    validator.validatePassword(password);
+    validator.validateRepeatPassword(password, repeatPassword);
+
+    // TODO- show error messages
+    console.log("validators.erros", validator.errors);
   };
 
   //repeat-password input Handler
   handleRepeatPasswordInput = (event) => {
-    const repeatPasswordInput = event.target;
+    const passwordInput = event.target;
+    const repeatPasswordInput = this.repeatPasswordInput;
+
+    const password = passwordInput.value;
     const repeatPassword = repeatPasswordInput.value;
+
+    validator.validatePassword(password);
+    validator.validateRepeatPassword(password, repeatPassword);
+
+    console.log("validators.erros", validator.errors);
   };
 
   // save data (button submit) Handler
