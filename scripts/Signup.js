@@ -39,16 +39,11 @@ class Signup {
     const password = this.passwordInput.value;
     const repeatPassword = this.repeatPasswordInput.value;
 
-    //create new user
-    const newUser = {
-      name,
-      email,
-      password,
-    };
-
-    console.log(newUser);
+    //create new user, taking the user object from the class User in user.js
+    const newUser = new User(name, email, password);
 
     //save user in the data base
+    db.saveNewUser(newUser);
 
     //empty form
     this.nameInput.value = "";
