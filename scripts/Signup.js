@@ -89,6 +89,8 @@ class Signup {
     this.emailInput.value = "";
     this.passwordInput.value = "";
     this.repeatPasswordInput.value = "";
+
+    this.redirect();
   };
 
   // event listener from inputs Handler
@@ -101,6 +103,11 @@ class Signup {
     );
 
     this.buttonInput.addEventListener("click", this.saveData);
+  };
+
+  //redirect to dashboard after login
+  redirect = () => {
+    setTimeout(() => location.assign("index.html"), 2000);
   };
 }
 
