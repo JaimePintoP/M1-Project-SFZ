@@ -11,7 +11,7 @@ class Signup {
     this.errorsWrapper = document.querySelector(".message-container");
   }
 
-  // email Handler
+  // email input Handler
   handleEmailInput = (event) => {
     const emailInput = event.target;
     const email = emailInput.value;
