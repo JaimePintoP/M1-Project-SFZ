@@ -328,7 +328,9 @@ body {
   }
 
   .button {
-    margin: 30px 0;
+    margin: 20px 0;
+    font-family: "Orbitron", sans-serif;
+    height: 30px;
   }
 
   .message-container {
@@ -364,5 +366,4 @@ body {
   }
 
   /* *** /// About Us /// *** */
- 
 }
