@@ -141,7 +141,8 @@ body {
 }
 
 /* **** /// **** DESKTOP SCREEN **** /// **** */
-/* @media (min-width: 768px) */
+@media (min-width: 768px) {
+}
 
 /* **** /// **** MOBILE SCREEN **** /// **** */
 
@@ -220,7 +221,7 @@ form input {
   display: flex;
   justify-content: space-around;
 }
-/* ----- END COMMON STYLES ----- */
+/* ------------------------- END COMMON STYLES ------------------------------ */
 
 /* *** /// Home Page /// *** */
 .header-section {
@@ -278,11 +279,18 @@ hr {
 
 /* *** /// Dashboard /// *** */
 /* apod */
-h2 {
+h2,
+h4 {
   margin: 10px;
   font-family: "Orbitron", sans-serif;
 }
 
+.apod-text {
+  margin: 15px;
+  text-align: justify;
+  text-indent: 20px;
+  line-height: 2;
+}
 /* galery */
 .gallery-title {
   margin: 20px 15px;
