@@ -48,13 +48,16 @@ const galleryMedia = document.querySelector(".results-container");
 const searchInput = document.querySelector("#search-input");
 const searchButton = document.querySelector("#search-button");
 
+// random number function, to be used to get a random img from the search
 function randomNum(number) {
   return Math.floor(Math.random() * number);
 }
 
+//Search engine
 searchButton.addEventListener("click", function (event) {
   event.preventDefault();
   galleryMedia.innerHTML = "";
+
   fetch(`https://images-api.nasa.gov/search?q=${searchInput.value}`)
     .then((response) => {
       //console.log("response", response);
@@ -66,26 +69,34 @@ searchButton.addEventListener("click", function (event) {
 
       const searchImage = document.createElement("article");
 
-      //   const randomImg = Math.floor(
-      //     Math.random() * data.collection.items.length
-      //   );
+      //console.log("data.collection", data.collection.items);
 
-      //console.log(randomImg);
+      const items = data.collection.items;
 
-      // check media type for the content collection.items[arrayPosition].data[arrayPosition].media_type. Put random in items[random]
+      let imagesItems = items.map((item) => {
+        if (item.data[0].media_type === "video") {
+          return;
+        } else {
+          return item;
+        }
+      });
+
+      //filter undefines elements - return the same array but without the ndefined elements (videos)
+      imagesItems = imagesItems.filter(function (element) {
+        return element !== undefined;
+      });
+
+      console.log("images items", imagesItems);
+
+      const itemsArrPosition = imagesItems.length;
+
+      //console.log("items array position", itemsArrPosition);
+
+      // check media type for the content collection.items[arrayPosition].data[arrayPosition].media_type = "video"
+
       searchImage.innerHTML = `
-      <img src="${
-        data.collection.items[randomNum(data.collection.items.length)].links[0]
-          .href
-      }"/>
-      <img src="${
-        data.collection.items[randomNum(data.collection.items.length)].links[0]
-          .href
-      }"/>
-      <img src="${
-        data.collection.items[randomNum(data.collection.items.length)].links[0]
-          .href
-      }"/>
+      <img src="${imagesItems[randomNum(itemsArrPosition)].links[0].href}"/>
+      <img src="${imagesItems[randomNum(itemsArrPosition)].links[0].href}"/>
       `;
 
       console.log(galleryMedia);

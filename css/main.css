@@ -140,10 +140,6 @@ body {
   color: white;
 }
 
-/* **** /// **** DESKTOP SCREEN **** /// **** */
-@media (min-width: 768px) {
-}
-
 /* **** /// **** MOBILE SCREEN **** /// **** */
 
 /* *** Texts under an image (info, apod, about us) *** */
@@ -377,3 +373,11 @@ h4 {
 }
 
 /* *** /// About Us /// *** */
+
+/* **** /// **** TABLET SCREEN **** /// **** */
+@media screen and (min-width: 768px) {
+}
+
+/* **** /// **** DESKTOP SCREEN **** /// **** */
+@media screen and (min-width: 1200px) {
+}
