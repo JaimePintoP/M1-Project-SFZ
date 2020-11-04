@@ -24,13 +24,13 @@ fetch(
       apodDisplay.innerHTML = `
       <iframe class="apod-video" width="420rem" height="315rem" src="${data.url}"></iframe>
       <h4>${data.title}</h4>
-      <p class="apod-text" >${data.explanation}</p> `;
+      <p class="image-text" >${data.explanation}</p> `;
     } else if (data.media_type === "image") {
       //add img
       apodDisplay.innerHTML = `
         <img class= "apod-image" src="${data.url}"/>
         <h5>${data.title}</h5>
-        <p class="apod-text" >${data.explanation}</p> 
+        <p class="image-text" >${data.explanation}</p> 
         `;
     }
     // append to .apod-media
@@ -90,6 +90,8 @@ searchButton.addEventListener("click", function (event) {
 
       const itemsArrPosition = imagesItems.length;
 
+      //to add style to the searched images
+      searchImage.setAttribute("class", "search-images");
       //console.log("items array position", itemsArrPosition);
 
       // check media type for the content collection.items[arrayPosition].data[arrayPosition].media_type = "video"

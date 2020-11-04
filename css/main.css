@@ -182,6 +182,7 @@ h5 {
 form input {
   margin: 15px 0;
   text-align: center;
+  font-family: "Orbitron", sans-serif;
 }
 
 /* *** ALL FOOTERS *** */
@@ -195,6 +196,7 @@ form input {
   display: flex;
   justify-content: space-around;
 }
+
 /* ------------------------- END COMMON STYLES ------------------------------ */
 
 /* *** /// Home Page /// *** */
@@ -273,12 +275,6 @@ h4 {
   margin: 0 auto;
 }
 
-.apod-text {
-  margin: 15px;
-  text-align: justify;
-  text-indent: 20px;
-  line-height: 2;
-}
 /* galery */
 .gallery-title {
   margin: 20px 15px;
@@ -290,14 +286,46 @@ h4 {
   justify-content: center;
 }
 
-#search-button {
+#search-input {
   font-family: "Orbitron", sans-serif;
+  width: 12rem;
 }
 
-.gallery img {
+#search-button {
+  font-family: "Orbitron", sans-serif;
+  padding: 4px 8px;
+  background-color: darkblue;
+  color: white;
+}
+
+/* .results-container {
+  display: flex;
+  justify-content: center;
+} */
+
+.search-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.results-container img {
+  height: 43vw;
+  width: 43vw;
+  margin: 5px;
+  border: 1px solid grey;
+}
+
+/* .results-container img:hover {
+  height: 43vw;
+  width: 43vw;
+  margin: 5px;
+  border: 1px solid white;
+} */
+/* .gallery img {
   width: 100%;
   margin-top: 5px;
-}
+} */
 
 .gallery {
   margin: 10px 10px 15px 10px;
@@ -347,6 +375,7 @@ h4 {
   color: white;
   border-radius: 5px;
   box-shadow: 0 0 10px #feb1b1;
+  font-family: "Orbitron", sans-serif;
 }
 
 .message-container p.correct-message {
@@ -372,8 +401,17 @@ h4 {
 .about-us {
   margin: 85px 0;
 }
+
+.about-us p {
+  margin: 15px 25px;
+}
 /* **** /// **** TABLET SCREEN **** /// **** */
 @media screen and (min-width: 768px) {
+  p {
+    font-size: 1.2rem;
+    margin: 30px 60px;
+  }
+
   /* *** /// Home Page /// *** */
 
   .header-section {
@@ -395,27 +433,130 @@ h4 {
 
   /* / main / */
   .info-logo img {
-    margin: 0 auto;
+    margin-top: 15px;
+    width: 30%;
+    height: 30%;
+    position: relative;
+    left: 35%;
+  }
+  .social {
+    margin: 10px;
+    padding: 10px;
+  }
+  .social ul {
+    font-size: 20px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  /* *** /// Dashboard /// *** */
+  /* apod */
+
+  .apod-title {
+    margin-bottom: 20px;
+  }
+
+  .apod h5 {
+    margin: 30px 0;
+  }
+
+  .apod {
+    margin: 85px 0;
+  }
+  .apod-text {
+    margin: 15px;
+    text-align: justify;
+    text-indent: 20px;
+    line-height: 2;
+    font-size: 1.2rem;
+  }
+
+  /* galery */
+
+  #search-input {
+    font-family: "Orbitron", sans-serif;
+    width: 25rem;
+  }
+
+  #search-button {
+    font-family: "Orbitron", sans-serif;
+    /* height: 25px; */
+    padding: 4px 30px;
+    background-color: darkblue;
+    color: white;
+  }
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .results-container img {
+    height: 30vw;
+    width: 30vw;
+    margin: 5px;
+    border: 1px solid white;
+  }
+
+  /* *** /// About Us /// *** */
+
+  .about-us p {
+    margin: 30px 45px;
+  }
+
+  /* *** /// Log In /// *** */
+  .login {
+    margin: 80px 0 40px 0;
+    text-align: center;
+  }
+  .login img {
+    height: 25vw;
+    margin: 20px 0;
+  }
+  .login-title {
+    margin: 20px 0;
+  }
+
+  .form-wrapper > form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 400px;
+  }
+
+  /* *** /// Sign In /// *** */
+  .signup {
+    margin: 150px 0 85px 0;
+    text-align: center;
   }
 }
 
 /* **** /// **** DESKTOP SCREEN **** /// **** */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
+  .navbar {
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 35px;
+  }
+
+  /* *** /// Home Page /// *** */
   .header-section {
     font-family: "Orbitron", sans-serif;
-    height: 65vw;
+    height: 58vw;
     background: url("../images/sunrise-over-the-earth.jpg") no-repeat center
       center / cover;
     position: relative;
   }
   .header-text {
     position: absolute;
-    top: 60%;
+    top: 70%;
     left: 55%;
   }
-  h1 {
-    font-size: 5rem;
-  }
+
   .info-logo img {
     margin-top: 15px;
     width: 30%;
@@ -424,8 +565,8 @@ h4 {
     left: 35%;
   }
   p {
-    font-size: 1.5rem;
-    margin: 30px 100px;
+    font-size: 1.2rem;
+    margin: 30px 30px;
   }
 
   .carousel {
@@ -445,5 +586,118 @@ h4 {
     margin: 10px 0;
     display: flex;
     justify-content: space-around;
+  }
+
+  /* *** /// Dashboard /// *** */
+  /* apod */
+
+  .apod-title {
+    margin-bottom: 20px;
+    font-size: 35px;
+  }
+
+  .apod h5 {
+    margin: 30px 0;
+    font-size: 25px;
+  }
+
+  .apod {
+    margin: 85px 0;
+  }
+
+  /* galery */
+
+  #search-input {
+    font-family: "Orbitron", sans-serif;
+    width: 40rem;
+    padding: 6px 0;
+    font-size: 20px;
+  }
+
+  #search-button {
+    font-family: "Orbitron", sans-serif;
+    padding: 8px 30px;
+    background-color: darkblue;
+    color: white;
+    font-size: 20px;
+  }
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .results-container img {
+    height: 43vw;
+    width: 43vw;
+    margin: 5px;
+    border: 1px solid grey;
+  }
+
+  /* *** /// About Us /// *** */
+
+  /* *** /// Log In /// *** */
+
+  .login {
+    margin: 150px 0 80px 0;
+    text-align: center;
+  }
+  .login img {
+    height: 25vw;
+    margin: 20px 0;
+  }
+  .login-title {
+    margin: 20px 0;
+  }
+
+  .form-wrapper > form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 400px;
+    font-size: 20px;
+  }
+  .button {
+    margin: 20px 0;
+    font-family: "Orbitron", sans-serif;
+    height: 40px;
+    font-size: 25px;
+  }
+
+  /* *** /// Sign Up /// *** */
+
+  .signup {
+    margin: 85px 0;
+    text-align: center;
+  }
+
+  .joinus-title {
+    margin: 20px 0;
+    padding: 80px 0 10px 0;
+  }
+
+  .form-wrapper {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-wrapper > form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 400px;
+  }
+
+  .button {
+    margin: 20px 0;
+    font-family: "Orbitron", sans-serif;
+    height: 45px;
+  }
+
+  .message-container {
+    width: 80%;
+    max-width: 400px;
   }
 }
