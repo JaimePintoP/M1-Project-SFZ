@@ -1,5 +1,3 @@
-"use strict";
-
 // ------------------- APOD ----------------------
 // https://api.nasa.gov/planetary/apod?api_key=e6DggTe6We7GoAoc1uezggpzDaHufjTSr3DfzHod
 
