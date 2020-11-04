@@ -140,6 +140,14 @@ body {
   color: white;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Orbitron", sans-serif;
+}
+
 /* **** /// **** MOBILE SCREEN **** /// **** */
 
 /* *** Texts under an image (info, apod, about us) *** */
@@ -167,47 +175,6 @@ body {
 .nav-link {
   text-align: center;
 }
-/* nav {
-  display: block;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  height: auto;
-  padding-right: 10px;
-}
-
-.nav-container a {
-  padding: 10px;
-}
-
-.nav-container img {
-  nav-bar logo
-  height: 40px;
-}
-
-.nav-container div {
-  display: block;
-}
-
-.nav-menu {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  line-height: 2;
-} */
-
-/* .nav-menu > li {
-    padding: 5px;
-  } */
-
-/* .hide-menu {
-  display: none;
-} */
 
 /* *** FORMS *** */
 
@@ -256,7 +223,7 @@ form input {
 
 .info {
   position: relative;
-  padding-top: 10px;
+  padding: 10px 10px;
 }
 .info-logo img {
   height: 40vw;
@@ -264,7 +231,7 @@ form input {
   left: 30%;
 }
 
-/* click to dasboard */
+/* click to dashboard */
 .discover-more {
   text-align: right;
   line-height: 7;
@@ -289,8 +256,12 @@ hr {
 /* apod */
 h2,
 h4 {
-  margin: 10px;
-  font-family: "Orbitron", sans-serif;
+  margin: 15px;
+  font-size: 25px;
+}
+
+.apod h5 {
+  margin-top: 10px;
 }
 
 .apod {
@@ -298,7 +269,8 @@ h4 {
 }
 
 .apod-image {
-  width: 21rem;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .apod-text {
@@ -313,7 +285,15 @@ h4 {
   text-align: right;
 }
 
-/* provisory */
+.search-container {
+  display: flex;
+  justify-content: center;
+}
+
+#search-button {
+  font-family: "Orbitron", sans-serif;
+}
+
 .gallery img {
   width: 100%;
   margin-top: 5px;
@@ -322,11 +302,6 @@ h4 {
 .gallery {
   margin: 10px 10px 15px 10px;
 }
-
-/* social media links */
-/* .social {
-    font-family: "Orbitron", sans-serif;
-  } */
 
 /* *** /// Sign Up /// *** */
 
@@ -399,8 +374,76 @@ h4 {
 }
 /* **** /// **** TABLET SCREEN **** /// **** */
 @media screen and (min-width: 768px) {
+  /* *** /// Home Page /// *** */
+
+  .header-section {
+    font-family: "Orbitron", sans-serif;
+    height: 95vw;
+    background: url("/images/sunrise-over-the-earth.jpg") no-repeat center
+      center / cover;
+    position: relative;
+  }
+  /* SFZ title */
+  .header-text {
+    position: absolute;
+    top: 67%;
+    left: 55%;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+
+  /* / main / */
+  .info-logo img {
+    margin: 0 auto;
+  }
 }
 
 /* **** /// **** DESKTOP SCREEN **** /// **** */
 @media screen and (min-width: 1200px) {
+  .header-section {
+    font-family: "Orbitron", sans-serif;
+    height: 65vw;
+    background: url("/images/sunrise-over-the-earth.jpg") no-repeat center
+      center / cover;
+    position: relative;
+  }
+  .header-text {
+    position: absolute;
+    top: 60%;
+    left: 55%;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  .info-logo img {
+    margin-top: 15px;
+    width: 30%;
+    height: 30%;
+    position: relative;
+    left: 35%;
+  }
+  p {
+    font-size: 1.5rem;
+    margin: 30px 100px;
+  }
+
+  .carousel {
+    margin: 50px;
+  }
+  /* .image-text {
+    font-size: 1.5rem;
+    margin: 10px 100px;
+  } */
+
+  .social {
+    margin: 10px;
+    padding: 10px;
+  }
+  .social ul {
+    font-size: 20px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-around;
+  }
 }

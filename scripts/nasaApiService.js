@@ -31,7 +31,7 @@ fetch(
       //add img
       apodDisplay.innerHTML = `
         <img class= "apod-image" src="${data.url}"/>
-        <h4>${data.title}</h4>
+        <h5>${data.title}</h5>
         <p class="apod-text" >${data.explanation}</p> 
         `;
     }
