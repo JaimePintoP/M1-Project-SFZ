@@ -27,10 +27,12 @@ fetch(
       <iframe width="420rem" height="315rem" src="${data.url}"></iframe>
       <h4>${data.title}</h4>
       <p class="apod-text" >${data.explanation}</p> `;
-    } else {
+    } else if (data.media_type === "image") {
       //add img
       apodDisplay.innerHTML = `
-        <img src="${data.url}/>
+        <img src="${data.url}"/>
+        <h4>${data.title}</h4>
+        <p class="apod-text" >${data.explanation}</p> 
         `;
     }
     // append to .apod-media
