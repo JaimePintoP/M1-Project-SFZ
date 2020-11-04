@@ -156,7 +156,18 @@ body {
   margin-top: 5px;
 }
 /* *** ALL NAV BARS *** */
-nav {
+
+.navbar-brand img {
+  width: 2.5rem;
+}
+.bg-light {
+  background-color: black !important;
+}
+
+.nav-link {
+  text-align: center;
+}
+/* nav {
   display: block;
 }
 
@@ -172,7 +183,7 @@ nav {
 }
 
 .nav-container img {
-  /* nav-bar logo */
+  nav-bar logo
   height: 40px;
 }
 
@@ -188,7 +199,7 @@ nav {
   align-items: center;
   width: 100%;
   line-height: 2;
-}
+} */
 
 /* .nav-menu > li {
     padding: 5px;
@@ -260,6 +271,7 @@ form input {
 }
 hr {
   width: 85%;
+  background-color: white;
 }
 /* footer Home */
 .home-footer {
@@ -361,7 +373,7 @@ h4 {
 
 /* *** /// Log In /// *** */
 .login {
-  margin: 40px 0;
+  margin: 80px 0 40px 0;
   text-align: center;
 }
 .login img {
