@@ -35,7 +35,7 @@ class Login {
     if (!user) {
       p.textContent = "Email or password are incorrect!";
     } else {
-      p.textContent = `Welcome aboard ${user.name}!`;
+      p.textContent = `Welcome back ${user.name}!`;
       p.classList.add("correct-message");
       //go to dashboard after login
       this.redirect();

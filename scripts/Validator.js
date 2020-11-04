@@ -16,7 +16,7 @@ class Validator {
     this.invalidEmailError = "Please enter a valid email";
     this.emailExistsError = "Sorry! This email is already taken";
     this.passwordError = "Password must be atleast 6 characters long";
-    this.repeatPasswordError = "Password and repeat password must match";
+    this.repeatPasswordError = "Password and Repeat Password must match";
 
     //object of all the errors
     this.errors = {

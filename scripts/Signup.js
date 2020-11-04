@@ -9,6 +9,7 @@ class Signup {
 
     this.buttonInput = document.querySelector("#signup-button");
     this.errorsWrapper = document.querySelector(".message-container");
+    this.messageContainer = document.querySelector(".message-container");
   }
 
   // email input Handler
@@ -89,6 +90,12 @@ class Signup {
     this.emailInput.value = "";
     this.passwordInput.value = "";
     this.repeatPasswordInput.value = "";
+
+    // Succes message
+    const p = document.createElement("p");
+    p.textContent = `Welcome aboard ${name}!`;
+    p.classList.add("correct-message");
+    this.messageContainer.appendChild(p);
 
     //Redirect to home page
     this.redirect();
