@@ -293,6 +293,14 @@ h4 {
   font-family: "Orbitron", sans-serif;
 }
 
+.apod {
+  margin: 85px 0;
+}
+
+.apod-image {
+  width: 21rem;
+}
+
 .apod-text {
   margin: 15px;
   text-align: justify;
@@ -386,6 +394,9 @@ h4 {
 
 /* *** /// About Us /// *** */
 
+.about-us {
+  margin: 85px 0;
+}
 /* **** /// **** TABLET SCREEN **** /// **** */
 @media screen and (min-width: 768px) {
 }

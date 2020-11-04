@@ -24,13 +24,13 @@ fetch(
     if (data.media_type === "video") {
       //add iframe
       apodDisplay.innerHTML = `
-      <iframe width="420rem" height="315rem" src="${data.url}"></iframe>
+      <iframe class="apod-video" width="420rem" height="315rem" src="${data.url}"></iframe>
       <h4>${data.title}</h4>
       <p class="apod-text" >${data.explanation}</p> `;
     } else if (data.media_type === "image") {
       //add img
       apodDisplay.innerHTML = `
-        <img src="${data.url}"/>
+        <img class= "apod-image" src="${data.url}"/>
         <h4>${data.title}</h4>
         <p class="apod-text" >${data.explanation}</p> 
         `;
@@ -97,6 +97,14 @@ searchButton.addEventListener("click", function (event) {
       // check media type for the content collection.items[arrayPosition].data[arrayPosition].media_type = "video"
 
       searchImage.innerHTML = `
+      <img src="${imagesItems[randomNum(itemsArrPosition)].links[0].href}"/>
+      <img src="${imagesItems[randomNum(itemsArrPosition)].links[0].href}"/>
+      <img src="${imagesItems[randomNum(itemsArrPosition)].links[0].href}"/>
+      <img src="${imagesItems[randomNum(itemsArrPosition)].links[0].href}"/>
+      <img src="${imagesItems[randomNum(itemsArrPosition)].links[0].href}"/>
+      <img src="${imagesItems[randomNum(itemsArrPosition)].links[0].href}"/>
+      <img src="${imagesItems[randomNum(itemsArrPosition)].links[0].href}"/>
+      <img src="${imagesItems[randomNum(itemsArrPosition)].links[0].href}"/>
       <img src="${imagesItems[randomNum(itemsArrPosition)].links[0].href}"/>
       <img src="${imagesItems[randomNum(itemsArrPosition)].links[0].href}"/>
       `;
