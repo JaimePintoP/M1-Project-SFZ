@@ -22,7 +22,7 @@ fetch(
     if (data.media_type === "video") {
       //add iframe
       apodDisplay.innerHTML = `
-      <iframe class="apod-video" width="420rem" height="315rem" src="${data.url}"></iframe>
+      <iframe class="apod-video" width="420rem" height="315rem" src="${data.url}" allowfullscreen></iframe>
       <h4>${data.title}</h4>
       <p class="image-text" >${data.explanation}</p> `;
     } else if (data.media_type === "image") {
