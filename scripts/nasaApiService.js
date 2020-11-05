@@ -81,7 +81,7 @@ searchButton.addEventListener("click", function (event) {
         }
       });
 
-      //filter undefines elements - return the same array but without the ndefined elements (videos)
+      //filter undefines elements - return the same array but without the undefined elements (videos)
       imagesItems = imagesItems.filter(function (element) {
         return element !== undefined;
       });
