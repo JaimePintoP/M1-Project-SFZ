@@ -1,8 +1,8 @@
-<img src="/Users/james/Documents/Ironhack/Bootcamp/Module-1/Proyect M1/Images/sunrise-over-the-earth.jpg"  />
+<img src="/images/sunrise-over-the-earth.jpg"  />
 
 # **Space Fan Zone**
 
-Space, the final frontier... Yes, so many of the world's biggest mysteries lie in it. Here at the Space Fan Zone, you can find a place to share and admire the infinite depths of an undiscovered world. Awesome images taken by NASA, the Astronomy Picture of the Day (APOD), and a community full of people that dream of galaxies and celestial bodies. 
+Space, the final frontier... Yes, so many of the world's biggest mysteries lie in it. Here at the Space Fan Zone, you can find a place to share and admire the infinite depths of an undiscovered world. Awesome images taken by NASA, the Astronomy Picture of the Day (APOD), and a community full of people that dream of galaxies and celestial bodies.
 
 Sign up and join us into our space shuttle to receive news updates, event information and much more. See you at the launch pad!
 
@@ -32,6 +32,7 @@ Sign up and join us into our space shuttle to receive news updates, event inform
 
 ### Links
 
+- [Deploy](https://jaimepintop.github.io/Space-Fan-Zone/)
 - [Trello](https://trello.com/b/KuGA1yeP/space-fan-zone-m1-project/calendar)
-- [Github](https://jaimepintop.github.io/M1-Project-SFZ/index.html)
+- [Github](https://github.com/JaimePintoP/Space-Fan-Zone)
 - [Slides](https://docs.google.com/presentation/d/1nCgOee45LTQ09gY9tOpNE4y3pHuxL5Rulscb9VdGyRI/edit?usp=sharing)
